@@ -29,7 +29,7 @@ public class Driver extends ApplicationAdapter {
 		float h = Gdx.graphics.getHeight(); // screen height
 		
 		cam = new OrthographicCamera(30, 30 * (h / w)); // no idea how this will look, but we'll see
-		cam.position.set(cam.viewportWidth/2f, cam.viewportWidth/2f, 0);
+		cam.position.set(cam.viewportWidth/2f, 0, 0);
 		cam.update();
 		
 		map = new World(loadMap());
@@ -177,7 +177,7 @@ class World{
 				break;
 			}
 			
-			SR.rect(tile.getX()*3, tile.getY()*3, 3, 3);
+			SR.rect(tile.getX()*1.5f, tile.getY()*1.5f, 1.5f, 1.5f);
 			SR.end();
 		}
 	}
